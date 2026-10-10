@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS TEAM - Staff Application</title>
+    <link rel="stylesheet" href="legal.css">
+    <link rel="stylesheet" href="apply.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</div>
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kthehu në Faqen Kryesore</a>
+    </header>
+
+    <section class="page-header">
+        <div class="icon-big"><i class="fa-solid fa-user-tie"></i></div>
+        <h1>Staff Application</h1>
+        <p>Bashkohu me ekipin e NEXUS TEAM</p>
+        <span class="last-updated"><i class="fa-solid fa-clock"></i> Last updated: 10 Tetor 2026</span>
+    </section>
+
+    <div class="container">
+
+        <div class="intro-box">
+            <p>Ky është formulari zyrtar i aplikimit për staf në NEXUS TEAM. Ju lutemi plotësoni të gjitha fushat me kujdes. Aplikimet me ID të pavlefshme Discord do të refuzohen automatikisht.</p>
+        </div>
+
+        <div class="helper-box">
+            <button class="helper-toggle" type="button" aria-expanded="false">
+                <span><i class="fa-solid fa-circle-question" style="color: var(--accent-color); margin-right: 8px;"></i> Si ta gjeni Discord User ID tuaj?</span>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </button>
+            <div class="helper-content">
+                <ol class="helper-steps">
+                    <li>Hapni Discord dhe shkoni në Settings (ikona e ingranazhit)</li>
+                    <li>Shkoni në Advanced settings</li>
+                    <li>Aktivizoni "Developer Mode"</li>
+                    <li>Kthehuni në profilin tuaj, klikoni me të djathtën mbi emrin tuaj</li>
+                    <li>Klikoni "Copy User ID"</li>
+                    <li>Ngjitni numrin këtu (duhet të jetë 17-19 shifra, vetëm numra)</li>
+                </ol>
+            </div>
+        </div>
+
+        <form class="application-form" data-form-type="staff" data-success-box="successBox" novalidate>
+            <div class="form-error-banner">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Ju lutemi rishikoni fushat e shënuara me të kuqe dhe provoni përsëri.</span>
+            </div>
+
+            <h2 class="form-section-title"><i class="fa-solid fa-user"></i> Informacioni Personal</h2>
+
+            <div class="form-group row">
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Emri juaj i plotë" required>
+                    <div class="error-message" id="fullName-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                </div>
+                <div class="form-group">
+                    <label for="discordUsername">Discord Username <span class="required">*</span></label>
+                    <input type="text" id="discordUsername" name="discordUsername" placeholder="username#0000 ose @username" required>
+                    <div class="error-message" id="discordUsername-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="form-group">
+                    <label for="discordUserId">Discord User ID <span class="required">*</span></label>
+                    <div class="discord-id-wrapper">
+                        <input type="text" id="discordUserId" name="discordUserId" class="discord-id-input"
+                               inputmode="numeric" pattern="[0-9]{17,19}" maxlength="19"
+                               placeholder="123456789012345678" required>
+                        <i class="fa-solid fa-circle-check validation-icon"></i>
+                    </div>
+                    <div class="field-hint">Vetëm numra, 17-19 shifra</div>
+                    <div class="error-message" id="discordUserId-error"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid Discord ID (17-19 digits, numbers only)</div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age <span class="required">*</span></label>
+                    <input type="number" id="age" name="age" min="13" max="99" placeholder="Mosha juaj" required>
+                    <div class="error-message" id="age-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="timezone">Timezone <span class="required">*</span></label>
+                <select id="timezone" name="timezone" required>
+                    <option value="">Zgjidhni timezonin tuaj</option>
+                    <option value="UTC-12:00">(UTC-12:00) Baker Island</option>
+                    <option value="UTC-11:00">(UTC-11:00) American Samoa</option>
+                    <option value="UTC-10:00">(UTC-10:00) Hawaii</option>
+                    <option value="UTC-09:00">(UTC-09:00) Alaska</option>
+                    <option value="UTC-08:00">(UTC-08:00) Pacific Time (US & Canada)</option>
+                    <option value="UTC-07:00">(UTC-07:00) Mountain Time (US & Canada)</option>
+                    <option value="UTC-06:00">(UTC-06:00) Central Time (US & Canada)</option>
+                    <option value="UTC-05:00">(UTC-05:00) Eastern Time (US & Canada)</option>
+                    <option value="UTC-04:00">(UTC-04:00) Atlantic Time (Canada)</option>
+                    <option value="UTC-03:00">(UTC-03:00) Buenos Aires, Greenland</option>
+                    <option value="UTC-02:00">(UTC-02:00) Mid-Atlantic</option>
+                    <option value="UTC+01:00">(UTC+01:00) Central European Time (Albania, Germany, Italy, etc.)</option>
+                    <option value="UTC+02:00">(UTC+02:00) Eastern European Time, Egypt, South Africa</option>
+                    <option value="UTC+03:00">(UTC+03:00) Moscow, Nairobi, Istanbul</option>
+                    <option value="UTC+04:00">(UTC+04:00) Abu Dhabi, Baku, Dubai</option>
+                    <option value="UTC+05:00">(UTC+05:00) Karachi, Tashkent</option>
+                    <option value="UTC+05:30">(UTC+05:30) India, Sri Lanka</option>
+                    <option value="UTC+06:00">(UTC+06:00) Dhaka, Almaty</option>
+                    <option value="UTC+07:00">(UTC+07:00) Bangkok, Jakarta</option>
+                    <option value="UTC+08:00">(UTC+08:00) Beijing, Singapore, Taipei</option>
+                    <option value="UTC+09:00">(UTC+09:00) Tokyo, Seoul</option>
+                    <option value="UTC+10:00">(UTC+10:00) Sydney, Melbourne</option>
+                    <option value="UTC+11:00">(UTC+11:00) Solomon Islands</option>
+                    <option value="UTC+12:00">(UTC+12:00) Auckland, Fiji</option>
+                </select>
+                <div class="error-message" id="timezone-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi zgjidhni timezonin tuaj.</div>
+            </div>
+
+            <h2 class="form-section-title"><i class="fa-solid fa-briefcase"></i> Pozicioni & Përvoja</h2>
+
+            <div class="form-group">
+                <label>Role applying for <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="role-cofounder" name="role" value="Co-Founder" required>
+                        <label for="role-cofounder" class="radio-label">Co-Founder</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="role-headmod" name="role" value="Head Moderator" required>
+                        <label for="role-headmod" class="radio-label">Head Moderator</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="role-moderator" name="role" value="Moderator" required>
+                        <label for="role-moderator" class="radio-label">Moderator</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="role-event" name="role" value="Event Manager" required>
+                        <label for="role-event" class="radio-label">Event Manager</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="role-support" name="role" value="Support Team" required>
+                        <label for="role-support" class="radio-label">Support Team</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="role-developer" name="role" value="Developer" required>
+                        <label for="role-developer" class="radio-label">Developer</label>
+                    </div>
+                </div>
+                <div class="error-message" id="role-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi zgjidhni një rol.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="whyRole">Why do you want this role? <span class="required">*</span></label>
+                <textarea id="whyRole" name="whyRole" data-min-length="100" placeholder="Shpjegoni pse dëironi këtë rol (minimumi 100 karaktere)..." required></textarea>
+                <div class="char-counter insufficient" data-counter-for="whyRole">0 / 100 min</div>
+                <div class="error-message" id="whyRole-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi shkruani të paktën 100 karaktere.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Previous experience <span class="required">*</span></label>
+                <textarea id="experience" name="experience" data-min-length="50" placeholder="Përshkruani përvojën tuaj të mëparshme (minimumi 50 karaktere)..." required></textarea>
+                <div class="char-counter insufficient" data-counter-for="experience">0 / 50 min</div>
+                <div class="error-message" id="experience-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi shkruani të paktën 50 karaktere.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="hoursWeek">How many hours per week can you dedicate? <span class="required">*</span></label>
+                <input type="number" id="hoursWeek" name="hoursWeek" min="1" max="168" placeholder="p.sh. 10" required>
+                <div class="error-message" id="hoursWeek-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme (1-168).</div>
+            </div>
+
+            <h2 class="form-section-title"><i class="fa-solid fa-language"></i> Gjuhët & Konfirmimi</h2>
+
+            <div class="form-group">
+                <label>Languages spoken <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lang-albanian" name="languages" value="Albanian">
+                        <label for="lang-albanian" class="checkbox-label">Albanian</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lang-english" name="languages" value="English">
+                        <label for="lang-english" class="checkbox-label">English</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lang-italian" name="languages" value="Italian">
+                        <label for="lang-italian" class="checkbox-label">Italian</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lang-german" name="languages" value="German">
+                        <label for="lang-german" class="checkbox-label">German</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lang-french" name="languages" value="French">
+                        <label for="lang-french" class="checkbox-label">French</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lang-other" name="languages" value="Other">
+                        <label for="lang-other" class="checkbox-label">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox-single">
+                    <input type="checkbox" id="readRules" name="readRules" required>
+                    <label for="readRules">Kam lexuar dhe pranoj <a href="terms-of-service.html">Termat e Shërbimit</a> dhe <a href="privacy-policy.html">Politikën e Privatësisë</a> të NEXUS TEAM.</label>
+                </div>
+                <div class="error-message" id="readRules-error"><i class="fa-solid fa-circle-exclamation"></i> Duhet të pranoni rregullat për të vazhduar.</div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Dërgo Aplikimin
+            </button>
+        </form>
+
+        <div class="success-box" id="successBox">
+            <div class="success-icon">
+                <i class="fa-solid fa-check-circle"></i>
+            </div>
+            <h2>Aplikimi juaj u dërgua me sukses tek NEXUS TEAM!</h2>
+            <p>Futu në Server dhe kontakto liderinë NEXUS TEAM për të marrë rolin.</p>
+            <a href="https://discord.gg/xgP9mm79Zy" class="btn-join-server" target="_blank" rel="noopener">
+                <i class="fa-brands fa-discord"></i> Futu në Server
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NEXUS TEAM. Të gjitha të drejtat e rezervuara.</p>
+        <p class="footer-leader"><i class="fa-solid fa-crown"></i> Lider: Nexus Bot</p>
+        <div class="footer-links">
+            <a href="verify-user.html">Verification</a>
+            <a href="apply-staff.html">Apply Staff</a>
+            <a href="partnership.html">Partnership</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="apply.js"></script>
+</body>
+</html>

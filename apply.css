@@ -1,0 +1,574 @@
+/* ================= Staff & Partnership Application Styles ================= */
+:root {
+    --bg-color: #1e1f22;
+    --card-bg: #2b2d31;
+    --text-color: #dbdee1;
+    --text-muted: #a3a6aa;
+    --accent-color: #5865F2;
+    --accent-hover: #4752c4;
+    --border-color: #3f4147;
+    --success-color: #23a55a;
+    --gold-color: #f0b232;
+    --red-color: #da373c;
+}
+
+/* ================= Intro / Highlight Box ================= */
+.intro-box {
+    background-color: rgba(88, 101, 242, 0.1);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+}
+.intro-box p {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 15px;
+}
+
+/* ================= Collapsible Helper Box ================= */
+.helper-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin: 25px 0;
+    overflow: hidden;
+}
+.helper-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.2s;
+}
+.helper-toggle:hover {
+    background-color: rgba(88, 101, 242, 0.08);
+}
+.helper-toggle .toggle-icon {
+    font-size: 14px;
+    color: var(--accent-color);
+    transition: transform 0.3s;
+}
+.helper-box.open .helper-toggle .toggle-icon {
+    transform: rotate(180deg);
+}
+.helper-content {
+    display: none;
+    padding: 0 20px 20px 20px;
+}
+.helper-box.open .helper-content {
+    display: block;
+}
+.helper-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step-counter;
+}
+.helper-steps li {
+    counter-increment: step-counter;
+    padding: 10px 0 10px 45px;
+    position: relative;
+    color: var(--text-muted);
+    font-size: 14px;
+    border-bottom: 1px solid rgba(63, 65, 71, 0.5);
+}
+.helper-steps li:last-child {
+    border-bottom: none;
+}
+.helper-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Consolas', monospace;
+}
+
+/* ================= Application Form ================= */
+.application-form {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 35px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+.form-section-title {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-section-title i {
+    color: var(--accent-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group.row {
+    display: flex;
+    gap: 20px;
+}
+.form-group.row > .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.form-group label .required {
+    color: var(--red-color);
+    margin-left: 2px;
+}
+.form-group .field-hint {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #72767d;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.15);
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.form-group select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3a6aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+/* Discord ID field specific */
+.discord-id-wrapper {
+    position: relative;
+}
+.discord-id-wrapper .validation-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.discord-id-wrapper.valid .validation-icon {
+    opacity: 1;
+    color: var(--success-color);
+}
+.discord-id-wrapper.invalid .validation-icon {
+    opacity: 1;
+    color: var(--red-color);
+}
+
+/* ================= Radio Buttons ================= */
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+.radio-item:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(88, 101, 242, 0.08);
+}
+.radio-item input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--text-muted);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+}
+.radio-item input[type="radio"]:checked {
+    border-color: var(--accent-color);
+}
+.radio-item input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+.radio-item input[type="radio"]:checked ~ .radio-label {
+    color: #fff;
+}
+.radio-item .radio-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+.radio-item:has(input:checked) {
+    border-color: var(--accent-color);
+    background-color: rgba(88, 101, 242, 0.12);
+}
+.radio-item:has(input:checked) .radio-label {
+    color: #fff;
+}
+
+/* ================= Checkboxes ================= */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+.checkbox-item:hover {
+    border-color: var(--accent-color);
+}
+.checkbox-item input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--text-muted);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: border-color 0.2s, background 0.2s;
+}
+.checkbox-item input[type="checkbox"]:checked {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+}
+.checkbox-item input[type="checkbox"]:checked::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+.checkbox-item:has(input:checked) {
+    border-color: var(--accent-color);
+    background-color: rgba(88, 101, 242, 0.1);
+}
+.checkbox-item .checkbox-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+.checkbox-item:has(input:checked) .checkbox-label {
+    color: #fff;
+}
+
+/* Single required checkbox (rules) */
+.checkbox-single {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: rgba(240, 178, 50, 0.08);
+    border: 1px solid rgba(240, 178, 50, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 10px;
+}
+.checkbox-single input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 2px solid var(--gold-color);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 2px;
+    transition: border-color 0.2s, background 0.2s;
+}
+.checkbox-single input[type="checkbox"]:checked {
+    border-color: var(--gold-color);
+    background-color: var(--gold-color);
+}
+.checkbox-single input[type="checkbox"]:checked::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+}
+.checkbox-single label {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1.5;
+}
+.checkbox-single label a {
+    color: var(--gold-color);
+    text-decoration: none;
+}
+.checkbox-single label a:hover {
+    text-decoration: underline;
+}
+
+/* ================= Error Messages ================= */
+.error-message {
+    display: none;
+    color: var(--red-color);
+    font-size: 13px;
+    margin-top: 6px;
+    align-items: center;
+    gap: 6px;
+}
+.error-message.visible {
+    display: flex;
+}
+.error-message i {
+    font-size: 12px;
+}
+.form-group.has-error input,
+.form-group.has-error textarea,
+.form-group.has-error select {
+    border-color: var(--red-color);
+}
+.form-group.has-error input:focus,
+.form-group.has-error textarea:focus,
+.form-group.has-error select:focus {
+    box-shadow: 0 0 0 3px rgba(218, 55, 60, 0.15);
+}
+
+/* General form error banner */
+.form-error-banner {
+    display: none;
+    background-color: rgba(218, 55, 60, 0.12);
+    border: 1px solid var(--red-color);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    color: var(--red-color);
+    font-size: 14px;
+    align-items: center;
+    gap: 10px;
+}
+.form-error-banner.visible {
+    display: flex;
+}
+
+/* ================= Char Counter ================= */
+.char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+.char-counter.insufficient {
+    color: var(--text-muted);
+}
+.char-counter.sufficient {
+    color: var(--success-color);
+}
+
+/* ================= Submit Button ================= */
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+}
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ================= Success Box ================= */
+.success-box {
+    display: none;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(35, 165, 90, 0.15), rgba(35, 165, 90, 0.05));
+    border: 1px solid var(--success-color);
+    border-radius: 12px;
+    padding: 50px 30px;
+    margin-bottom: 25px;
+    animation: fadeInUp 0.5s ease;
+}
+.success-box.visible {
+    display: block;
+}
+.success-box .success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(35, 165, 90, 0.15);
+    border: 2px solid var(--success-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+.success-box .success-icon i {
+    font-size: 40px;
+    color: var(--success-color);
+}
+.success-box h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.success-box p {
+    color: var(--text-muted);
+    font-size: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+.success-box .btn-join-server {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--accent-color), var(--gold-color));
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+}
+.success-box .btn-join-server:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(240, 178, 50, 0.5);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .application-form {
+        padding: 20px;
+    }
+    .form-group.row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
+    .checkbox-group {
+        flex-direction: column;
+    }
+    .helper-toggle {
+        font-size: 14px;
+    }
+}

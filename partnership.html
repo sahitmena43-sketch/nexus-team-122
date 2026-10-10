@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS TEAM - Partnership Application</title>
+    <link rel="stylesheet" href="legal.css">
+    <link rel="stylesheet" href="apply.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</div>
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kthehu në Faqen Kryesore</a>
+    </header>
+
+    <section class="page-header">
+        <div class="icon-big"><i class="fa-solid fa-handshake"></i></div>
+        <h1>Partnership Application</h1>
+        <p>Bashkëpunoni me NEXUS TEAM</p>
+        <span class="last-updated"><i class="fa-solid fa-clock"></i> Last updated: 10 Tetor 2026</span>
+    </section>
+
+    <div class="container">
+
+        <div class="intro-box">
+            <p>Ky është formulari zyrtar i aplikimit për partneritet me NEXUS TEAM. Plotësoni të gjitha fushat me kujdes. Aplikimet me ID të pavlefshme Discord do të refuzohen automatikisht.</p>
+        </div>
+
+        <div class="helper-box">
+            <button class="helper-toggle" type="button" aria-expanded="false">
+                <span><i class="fa-solid fa-circle-question" style="color: var(--accent-color); margin-right: 8px;"></i> Si ta gjeni Discord User ID tuaj?</span>
+                <i class="fa-solid fa-chevron-down toggle-icon"></i>
+            </button>
+            <div class="helper-content">
+                <ol class="helper-steps">
+                    <li>Hapni Discord dhe shkoni në Settings (ikona e ingranazhit)</li>
+                    <li>Shkoni në Advanced settings</li>
+                    <li>Aktivizoni "Developer Mode"</li>
+                    <li>Kthehuni në profilin tuaj, klikoni me të djathtën mbi emrin tuaj</li>
+                    <li>Klikoni "Copy User ID"</li>
+                    <li>Ngjitni numrin këtu (duhet të jetë 17-19 shifra, vetëm numra)</li>
+                </ol>
+            </div>
+        </div>
+
+        <form class="application-form" data-form-type="partnership" data-success-box="successBox" novalidate>
+            <div class="form-error-banner">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Ju lutemi rishikoni fushat e shënuara me të kuqe dhe provoni përsëri.</span>
+            </div>
+
+            <h2 class="form-section-title"><i class="fa-solid fa-user"></i> Informacioni juaj</h2>
+
+            <div class="form-group row">
+                <div class="form-group">
+                    <label for="serverName">Your Name / Server Name <span class="required">*</span></label>
+                    <input type="text" id="serverName" name="serverName" placeholder="Emri juaj ose emri i serverit" required>
+                    <div class="error-message" id="serverName-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                </div>
+                <div class="form-group">
+                    <label for="discordUsername">Discord Username <span class="required">*</span></label>
+                    <input type="text" id="discordUsername" name="discordUsername" placeholder="username#0000 ose @username" required>
+                    <div class="error-message" id="discordUsername-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="form-group">
+                    <label for="discordUserId">Discord User ID <span class="required">*</span></label>
+                    <div class="discord-id-wrapper">
+                        <input type="text" id="discordUserId" name="discordUserId" class="discord-id-input"
+                               inputmode="numeric" pattern="[0-9]{17,19}" maxlength="19"
+                               placeholder="123456789012345678" required>
+                        <i class="fa-solid fa-circle-check validation-icon"></i>
+                    </div>
+                    <div class="field-hint">Vetëm numra, 17-19 shifra</div>
+                    <div class="error-message" id="discordUserId-error"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid Discord ID (17-19 digits, numbers only)</div>
+                </div>
+                <div class="form-group">
+                    <label for="serverId">Your Server ID <span style="color: var(--text-muted); font-weight: 400;">(opsionale)</span></label>
+                    <div class="discord-id-wrapper">
+                        <input type="text" id="serverId" name="serverId" class="discord-id-input"
+                               inputmode="numeric" pattern="[0-9]{17,19}" maxlength="19"
+                               placeholder="123456789012345678">
+                        <i class="fa-solid fa-circle-check validation-icon"></i>
+                    </div>
+                    <div class="field-hint">Vetëm numra, 17-19 shifra</div>
+                </div>
+            </div>
+
+            <h2 class="form-section-title"><i class="fa-solid fa-briefcase"></i> Detajet e Partneritetit</h2>
+
+            <div class="form-group">
+                <label>Type of partnership <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="ptype-server" name="partnershipType" value="Server Partnership" required>
+                        <label for="ptype-server" class="radio-label">Server Partnership</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="ptype-content" name="partnershipType" value="Content Creator Partnership" required>
+                        <label for="ptype-content" class="radio-label">Content Creator Partnership</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="ptype-business" name="partnershipType" value="Business Partnership" required>
+                        <label for="ptype-business" class="radio-label">Business Partnership</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="ptype-botdev" name="partnershipType" value="Bot Developer Partnership" required>
+                        <label for="ptype-botdev" class="radio-label">Bot Developer Partnership</label>
+                    </div>
+                </div>
+                <div class="error-message" id="partnershipType-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi zgjidhni një lloj partneriteti.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="aboutProject">Tell us about your server/project <span class="required">*</span></label>
+                <textarea id="aboutProject" name="aboutProject" data-min-length="100" placeholder="Përshkruani serverin ose projektin tuaj (minimumi 100 karaktere)..." required></textarea>
+                <div class="char-counter insufficient" data-counter-for="aboutProject">0 / 100 min</div>
+                <div class="error-message" id="aboutProject-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi shkruani të paktën 100 karaktere.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="whyPartner">Why do you want to partner with NEXUS TEAM? <span class="required">*</span></label>
+                <textarea id="whyPartner" name="whyPartner" data-min-length="50" placeholder="Shpjegoni pse dëironi partneritet me ne (minimumi 50 karaktere)..." required></textarea>
+                <div class="char-counter insufficient" data-counter-for="whyPartner">0 / 50 min</div>
+                <div class="error-message" id="whyPartner-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi shkruani të paktën 50 karaktere.</div>
+            </div>
+
+            <div class="form-group row">
+                <div class="form-group">
+                    <label for="memberCount">How many members do you have? <span class="required">*</span></label>
+                    <input type="number" id="memberCount" name="memberCount" min="0" placeholder="p.sh. 500" required>
+                    <div class="error-message" id="memberCount-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                </div>
+                <div class="form-group">
+                    <label for="website">Your website or social media <span style="color: var(--text-muted); font-weight: 400;">(opsionale)</span></label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="offer">What can you offer to NEXUS TEAM? <span class="required">*</span></label>
+                <textarea id="offer" name="offer" placeholder="Përshkruani çfarë mund të ofroni për NEXUS TEAM..." required></textarea>
+                <div class="error-message" id="offer-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox-single">
+                    <input type="checkbox" id="readTerms" name="readTerms" required>
+                    <label for="readTerms">Kam lexuar dhe pranoj <a href="terms-of-service.html">Termat e Shërbimit</a> dhe kushtet e partneritetit të NEXUS TEAM.</label>
+                </div>
+                <div class="error-message" id="readTerms-error"><i class="fa-solid fa-circle-exclamation"></i> Duhet të pranoni kushtet për të vazhduar.</div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Dërgo Aplikimin
+            </button>
+        </form>
+
+        <div class="success-box" id="successBox">
+            <div class="success-icon">
+                <i class="fa-solid fa-check-circle"></i>
+            </div>
+            <h2>Aplikimi juaj për partneritet u dërgua me sukses!</h2>
+            <p>Futu në Server dhe kontakto liderinë NEXUS TEAM për të diskutuar partneritetin.</p>
+            <a href="https://discord.gg/xgP9mm79Zy" class="btn-join-server" target="_blank" rel="noopener">
+                <i class="fa-brands fa-discord"></i> Futu në Server
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NEXUS TEAM. Të gjitha të drejtat e rezervuara.</p>
+        <p class="footer-leader"><i class="fa-solid fa-crown"></i> Lider: Nexus Bot</p>
+        <div class="footer-links">
+            <a href="verify-user.html">Verification</a>
+            <a href="apply-staff.html">Apply Staff</a>
+            <a href="partnership.html">Partnership</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="apply.js"></script>
+</body>
+</html>
