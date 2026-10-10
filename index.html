@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS TEAM - Botët & Leader Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <a href="index.html" class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</a>
+        <button class="nav-toggle" aria-label="Hap menunë" aria-expanded="false" aria-controls="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+            <nav>
+                <a href="index.html#bots">Botët</a>
+                <a href="verify-user.html">Verification</a>
+                <a href="terms-of-service.html">Terms</a>
+                <a href="privacy-policy.html">Privacy</a>
+            </nav>
+            <a href="https://discord.gg/jWUhe4T636" class="btn-server" target="_blank" rel="noopener">
+                <i class="fa-brands fa-discord"></i> Futu në Server
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= PANELI I LIDERIT ================= -->
+    <section class="hero" id="leader-panel">
+        <div class="hero-content">
+            
+            <!-- AVATARI I LIDERIT -->
+            <div class="leader-avatar">
+                <img src="images/leader-avatar.png" alt="Leader Avatar" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-user-tie\'></i>';">
+            </div>
+            
+            <h1>NEXUS TEAM <span class="highlight">Leader Panel</span></h1>
+            
+            <!-- INFORMACIONI I LIDERIT -->
+            <div class="leader-info">
+                <p class="leader-username">
+                    <i class="fa-solid fa-crown"></i> 
+                    <span class="leader-name">SahitMena</span>
+                </p>
+                <p class="leader-id">
+                    <i class="fa-brands fa-discord"></i> 
+                    <span class="id-label">Discord ID:</span> 
+                    <code class="discord-id">781121784526929950</code>
+                </p>
+                <span class="verified-badge">
+                    <i class="fa-solid fa-circle-check"></i> Verified Leader
+                </span>
+            </div>
+
+            <p class="leader-desc">Paneli zyrtar i menaxhimit të NEXUS TEAM. Këtu lideri poston URL-të e verifikimit për Discord Developer Portal.</p>
+
+            <div class="leader-action">
+                <a href="https://discord.com/oauth2/authorize?client_id=1512437442463011047" class="btn-leader-bot" target="_blank">
+                    <i class="fa-brands fa-discord"></i> Shto Nexus Bot në Serverin Tënd
+                </a>
+                <a href="https://discord.gg/jWUhe4T636" class="btn-server btn-server-lg" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-discord"></i> Futu në Server
+                </a>
+            </div>
+
+            <!-- TRE URL-TË E VERIFIKIMIT -->
+            <div class="leader-urls">
+                <div class="leader-url-item">
+                    <label><i class="fa-solid fa-shield-halved"></i> Linked Roles Verification URL</label>
+                    <div class="input-group">
+                        <input type="text" readonly value="/verify-user" data-path="/verify-user" class="copy-input" id="verifyUrl">
+                        <button class="btn-copy" onclick="copyToClipboard('verifyUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="leader-url-item">
+                    <label><i class="fa-solid fa-file-contract"></i> Terms of Service URL</label>
+                    <div class="input-group">
+                        <input type="text" readonly value="/terms-of-service" data-path="/terms-of-service" class="copy-input" id="tosUrl">
+                        <button class="btn-copy" onclick="copyToClipboard('tosUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="leader-url-item">
+                    <label><i class="fa-solid fa-user-shield"></i> Privacy Policy URL</label>
+                    <div class="input-group">
+                        <input type="text" readonly value="/privacy-policy" data-path="/privacy-policy" class="copy-input" id="privacyUrl">
+                        <button class="btn-copy" onclick="copyToClipboard('privacyUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item"><i class="fa-solid fa-robot"></i><span>Botët</span><strong>7</strong></div>
+                <div class="stat-item"><i class="fa-solid fa-shield-halved"></i><span>Verification</span><strong>Active</strong></div>
+                <div class="stat-item"><i class="fa-solid fa-users"></i><span>Anëtarë</span><strong>+20</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KONTEJNERI I BOTËVE ================= -->
+    <main class="bots-section" id="bots">
+        <h2 class="section-title"><i class="fa-solid fa-robot"></i> Botët e NEXUS TEAM</h2>
+        <div class="bots-container">
+
+        <!-- NEXUS BOT -->
+        <div class="bot-card bot-card-short" id="nexus-bot">
+            <div class="bot-header">
+                <img src="images/nexus-bot.png" alt="Nexus Bot" class="bot-icon">
+                <div>
+                    <h2>Nexus Bot <span class="badge badge-verified-bot" title="Verified Bot"><i class="fa-solid fa-circle-check"></i> VERIFIED BOT</span></h2>
+                    <p class="bot-desc">Boti kryesor për menaxhimin dhe moderimin e serverit.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="bots/nexus-bot.html" class="btn-invite"><i class="fa-solid fa-terminal"></i> View Commands</a>
+            </div>
+        </div>
+
+        <!-- NEXUS AI -->
+        <div class="bot-card bot-card-short" id="nexus-ai">
+            <div class="bot-header">
+                <img src="images/nexus-ai.png" alt="Nexus AI" class="bot-icon">
+                <div>
+                    <h2>Nexus AI <span class="badge badge-verified-bot" title="Verified Bot"><i class="fa-solid fa-circle-check"></i> VERIFIED BOT</span></h2>
+                    <p class="bot-desc">Asistenti juaj inteligjent me fuqi të AI.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="bots/nexus-ai.html" class="btn-invite"><i class="fa-solid fa-terminal"></i> View Commands</a>
+            </div>
+        </div>
+
+        <!-- NEXUS STAT -->
+        <div class="bot-card bot-card-short" id="nexus-stat">
+            <div class="bot-header">
+                <img src="images/nexus-stat.png" alt="Nexus Stat" class="bot-icon">
+                <div>
+                    <h2>Nexus Stat <span class="badge badge-verified-bot" title="Verified Bot"><i class="fa-solid fa-circle-check"></i> VERIFIED BOT</span></h2>
+                    <p class="bot-desc">Statistika të detajuara për serverin tuaj.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="bots/nexus-stat.html" class="btn-invite"><i class="fa-solid fa-terminal"></i> View Commands</a>
+            </div>
+        </div>
+
+        <!-- NEXUS VERIFICATION -->
+        <div class="bot-card bot-card-short exclusive-card" id="nexus-verification">
+            <div class="bot-header">
+                <img src="images/nexus-verification.png" alt="NEXUS VERIFICATION" class="bot-icon">
+                <div>
+                    <h2>NEXUS VERIFICATION <span class="badge badge-verified-bot" title="Verified Bot"><i class="fa-solid fa-circle-check"></i> VERIFIED BOT</span> <span class="badge badge-exclusive">EXCLUSIVE</span></h2>
+                    <p class="bot-desc">Sistem verifikimi dhe siguri për anëtarët e rinj.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="bots/nexus-verification.html" class="btn-invite btn-exclusive"><i class="fa-solid fa-terminal"></i> View Commands</a>
+            </div>
+        </div>
+
+        <!-- NEXUS MUSIC -->
+        <div class="bot-card bot-card-short" id="nexus-music">
+            <div class="bot-header">
+                <img src="images/nexus-music.png" alt="Nexus Music" class="bot-icon">
+                <div>
+                    <h2>Nexus Music <span class="badge badge-verified-bot" title="Verified Bot"><i class="fa-solid fa-circle-check"></i> VERIFIED BOT</span></h2>
+                    <p class="bot-desc">Spotify + Deezer music bot me mbështetje 24/7.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="bots/nexus-music.html" class="btn-invite"><i class="fa-solid fa-terminal"></i> View Commands</a>
+            </div>
+        </div>
+
+        <!-- NEXUS FUNPLAY -->
+        <div class="bot-card bot-card-short" id="nexus-funplay">
+            <div class="bot-header">
+                <img src="images/nexus-funplay.png" alt="Nexus FunPlay" class="bot-icon">
+                <div>
+                    <h2>Nexus FunPlay <span class="badge badge-verified-bot" title="Verified Bot"><i class="fa-solid fa-circle-check"></i> VERIFIED BOT</span></h2>
+                    <p class="bot-desc">Bot argëtues me lojëra, sfida dhe shaka për serverin tënd.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="bots/nexus-funplay.html" class="btn-invite"><i class="fa-solid fa-terminal"></i> View Commands</a>
+            </div>
+        </div>
+
+        <!-- NEXUS RULES GEN -->
+        <div class="bot-card bot-card-short" id="nexus-rules">
+            <div class="bot-header">
+                <img src="images/nexus-rules.png" alt="Nexus Rules Gen" class="bot-icon">
+                <div>
+                    <h2>Nexus Rules Gen <span class="badge badge-verified-bot" title="Verified Bot"><i class="fa-solid fa-circle-check"></i> VERIFIED BOT</span></h2>
+                    <p class="bot-desc">Gjenerues automatik i rregullave për serverin.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="bots/nexus-rules.html" class="btn-invite"><i class="fa-solid fa-terminal"></i> View Commands</a>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2026 NEXUS TEAM. Të gjitha të drejtat e rezervuara.</p>
+        <p class="footer-leader"><i class="fa-solid fa-crown"></i> Lider: Nexus Bot</p>
+        <div class="footer-links">
+            <a href="verify-user.html">Verification</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
