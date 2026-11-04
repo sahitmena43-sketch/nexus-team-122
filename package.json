@@ -1,0 +1,8 @@
+{
+  "name": "nexus-team",
+  "version": "1.0.0",
+  "description": "NEXUS TEAM website",
+  "scripts": {
+    "build": "echo 'Static site - no build step needed'"
+  }
+}
