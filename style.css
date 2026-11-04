@@ -170,7 +170,7 @@ nav a:hover { color: #fff; }
 
 /* ================= KARTAT E BOTËVE ================= */
 .bots-container {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px; padding: 40px; max-width: 1400px; margin: 0 auto;
 }
 .bot-card {
@@ -205,8 +205,13 @@ nav a:hover { color: #fff; }
     margin-left: 8px; font-weight: bold;
 }
 .badge-verified { background-color: var(--success-color); color: #fff; }
+.badge-verified-bot {
+    display: inline-flex; align-items: center; gap: 4px;
+    background-color: var(--success-color); color: #fff;
+}
+.badge-verified-bot i { font-size: 9px; }
 .bot-desc { font-size: 14px; color: var(--text-muted); }
-.bot-actions { margin-bottom: 15px; }
+.bot-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; }
 .btn-invite {
     display: inline-flex; align-items: center; gap: 10px;
     background-color: var(--accent-color); color: #fff; padding: 10px 20px;
@@ -214,6 +219,15 @@ nav a:hover { color: #fff; }
     transition: background 0.3s, transform 0.2s;
 }
 .btn-invite:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+.btn-server {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 6px;
+    color: #fff; background: #3a3d45; text-decoration: none; font-size: 14px; font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-server:hover { background: #4a4d57; transform: translateY(-2px); }
+.bot-page-title { color: #fff; font-size: 22px; margin-bottom: 5px; }
+.bot-page .bot-card { max-width: 900px; margin: 0 auto; }
 
 .commands-section { margin-top: 15px; }
 .commands-section h3 {
