@@ -12,22 +12,27 @@
     <!-- ================= HEADER ================= -->
     <header>
         <div class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</div>
-        <nav>
-            <a href="#nexus-bot">Nexus Bot</a>
-            <a href="#nexus-ai">Nexus AI</a>
-            <a href="#nexus-roblox">Nexus Roblox</a>
-            <a href="#nexus-stat">Nexus Stat</a>
-            <a href="#nexus-verification">Verification</a>
-            <a href="#nexus-music">Music</a>
-            <a href="#nexus-funplay">FunPlay</a>
-            <a href="#nexus-rules">Rules Gen</a>
-            <a href="apply-staff.html">Apply Staff</a>
-            <a href="partnership.html">Partnership</a>
-        </nav>
-        <div id="google_translate_element" aria-label="Choose page language"></div>
-        <a href="https://discord.com/oauth2/authorize?client_id=1512437442463011047" class="btn-join" target="_blank">
-            <i class="fa-solid fa-crown"></i> Shto Nexus Bot
-        </a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+            <nav aria-label="Main navigation">
+                <a href="#nexus-bot">Nexus Bot</a>
+                <a href="#nexus-ai">Nexus AI</a>
+                <a href="#nexus-roblox">Nexus Roblox</a>
+                <a href="#nexus-stat">Nexus Stat</a>
+                <a href="#nexus-verification">Verification</a>
+                <a href="#nexus-music">Music</a>
+                <a href="#nexus-funplay">FunPlay</a>
+                <a href="#nexus-rules">Rules Gen</a>
+                <a href="apply-staff.html">Apply Staff</a>
+                <a href="partnership.html">Partnership</a>
+            </nav>
+            <div id="google_translate_element" aria-label="Choose page language"></div>
+            <a href="https://discord.com/oauth2/authorize?client_id=1512437442463011047" class="btn-join" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-crown"></i> Shto Nexus Bot
+            </a>
+        </div>
     </header>
 
     <!-- ================= PANELI I LIDERIT ================= -->
@@ -70,22 +75,22 @@
                 <div class="leader-url-item">
                     <label><i class="fa-solid fa-shield-halved"></i> Linked Roles Verification URL</label>
                     <div class="input-group">
-                        <input type="text" readonly value="https://nexus-team.netlify.app/verify-user" class="copy-input" id="verifyUrl">
-                        <button class="btn-copy" onclick="copyToClipboard('verifyUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                        <input type="text" readonly value="https://nexus-team-122.vercel.app/verify-user" class="copy-input" id="verifyUrl">
+                        <button class="btn-copy" type="button" aria-label="Copy Linked Roles Verification URL" onclick="copyToClipboard('verifyUrl', this)"><i class="fa-solid fa-copy"></i></button>
                     </div>
                 </div>
                 <div class="leader-url-item">
                     <label><i class="fa-solid fa-file-contract"></i> Terms of Service URL</label>
                     <div class="input-group">
-                        <input type="text" readonly value="https://nexus-team.netlify.app/terms-of-service" class="copy-input" id="tosUrl">
-                        <button class="btn-copy" onclick="copyToClipboard('tosUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                        <input type="text" readonly value="https://nexus-team-122.vercel.app/terms-of-service" class="copy-input" id="tosUrl">
+                        <button class="btn-copy" type="button" aria-label="Copy Terms of Service URL" onclick="copyToClipboard('tosUrl', this)"><i class="fa-solid fa-copy"></i></button>
                     </div>
                 </div>
                 <div class="leader-url-item">
                     <label><i class="fa-solid fa-user-shield"></i> Privacy Policy URL</label>
                     <div class="input-group">
-                        <input type="text" readonly value="https://nexus-team.netlify.app/privacy-policy" class="copy-input" id="privacyUrl">
-                        <button class="btn-copy" onclick="copyToClipboard('privacyUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                        <input type="text" readonly value="https://nexus-team-122.vercel.app/privacy-policy" class="copy-input" id="privacyUrl">
+                        <button class="btn-copy" type="button" aria-label="Copy Privacy Policy URL" onclick="copyToClipboard('privacyUrl', this)"><i class="fa-solid fa-copy"></i></button>
                     </div>
                 </div>
             </div>
@@ -187,7 +192,7 @@
         <!-- NEXUS ROBLOX -->
         <div class="bot-card" id="nexus-roblox">
             <div class="bot-header">
-                <img src="images/nexus-roblox.png" alt="Nexus Roblox" class="bot-icon" onerror="this.src='images/nexus-bot.png'">
+                <img src="images/nexus-roblox.png" alt="Nexus Roblox" class="bot-icon">
                 <div>
                     <h2>Nexus Roblox <span class="badge badge-verified">VERIFIED BOT</span></h2>
                     <p class="bot-desc">Fetch Roblox game stats, group info, and user profiles directly in Discord.</p>

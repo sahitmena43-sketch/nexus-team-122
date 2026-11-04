@@ -72,7 +72,11 @@ module.exports = async function handler(req, res) {
         return send(res, 400, { error: `Message must be between 1 and ${MAX_MESSAGE_LENGTH} characters.` });
     }
 
-    if (/\b(server|link|join|discord)\b/i.test(message)) {
+    if (/\b(server|link)\b/i.test(message)) {
+        return send(res, 200, { reply: SERVER_LINK });
+    }
+
+    if (/\b(join|discord)\b/i.test(message)) {
         return send(res, 200, { reply: `You can join our official Discord server here: ${SERVER_LINK}` });
     }
 
