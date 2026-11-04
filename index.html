@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS TEAM - Botët & Leader Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</div>
+        <nav>
+            <a href="#nexus-bot">Nexus Bot</a>
+            <a href="#nexus-ai">Nexus AI</a>
+            <a href="#nexus-roblox">Nexus Roblox</a>
+            <a href="#nexus-stat">Nexus Stat</a>
+            <a href="#nexus-verification">Verification</a>
+            <a href="#nexus-music">Music</a>
+            <a href="#nexus-funplay">FunPlay</a>
+            <a href="#nexus-rules">Rules Gen</a>
+        </nav>
+        <div id="google_translate_element" aria-label="Choose page language"></div>
+        <a href="https://discord.com/oauth2/authorize?client_id=1512437442463011047" class="btn-join" target="_blank">
+            <i class="fa-solid fa-crown"></i> Shto Nexus Bot
+        </a>
+    </header>
+
+    <!-- ================= PANELI I LIDERIT ================= -->
+    <section class="hero" id="leader-panel">
+        <div class="hero-content">
+            
+            <!-- AVATARI I LIDERIT -->
+            <div class="leader-avatar">
+                <img src="images/leader-avatar.png" alt="Leader Avatar" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-user-tie\'></i>';">
+            </div>
+            
+            <h1>NEXUS TEAM <span class="highlight">Leader Panel</span></h1>
+            
+            <!-- INFORMACIONI I LIDERIT -->
+            <div class="leader-info">
+                <p class="leader-username">
+                    <i class="fa-solid fa-crown"></i> 
+                    <span class="leader-name">SahitMena</span>
+                </p>
+                <p class="leader-id">
+                    <i class="fa-brands fa-discord"></i> 
+                    <span class="id-label">Discord ID:</span> 
+                    <code class="discord-id">781121784526929950</code>
+                </p>
+                <span class="verified-badge">
+                    <i class="fa-solid fa-circle-check"></i> Verified Leader
+                </span>
+            </div>
+
+            <p class="leader-desc">Paneli zyrtar i menaxhimit të NEXUS TEAM. Këtu lideri poston URL-të e verifikimit për Discord Developer Portal.</p>
+
+            <div class="leader-action">
+                <a href="https://discord.com/oauth2/authorize?client_id=1512437442463011047" class="btn-leader-bot" target="_blank">
+                    <i class="fa-brands fa-discord"></i> Shto Nexus Bot në Serverin Tënd
+                </a>
+            </div>
+
+            <!-- TRE URL-TË E VERIFIKIMIT -->
+            <div class="leader-urls">
+                <div class="leader-url-item">
+                    <label><i class="fa-solid fa-shield-halved"></i> Linked Roles Verification URL</label>
+                    <div class="input-group">
+                        <input type="text" readonly value="https://nexus-team.netlify.app/verify-user" class="copy-input" id="verifyUrl">
+                        <button class="btn-copy" onclick="copyToClipboard('verifyUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="leader-url-item">
+                    <label><i class="fa-solid fa-file-contract"></i> Terms of Service URL</label>
+                    <div class="input-group">
+                        <input type="text" readonly value="https://nexus-team.netlify.app/terms-of-service" class="copy-input" id="tosUrl">
+                        <button class="btn-copy" onclick="copyToClipboard('tosUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="leader-url-item">
+                    <label><i class="fa-solid fa-user-shield"></i> Privacy Policy URL</label>
+                    <div class="input-group">
+                        <input type="text" readonly value="https://nexus-team.netlify.app/privacy-policy" class="copy-input" id="privacyUrl">
+                        <button class="btn-copy" onclick="copyToClipboard('privacyUrl', this)"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item"><i class="fa-solid fa-robot"></i><span>Botët</span><strong>8</strong></div>
+                <div class="stat-item"><i class="fa-solid fa-shield-halved"></i><span>Verification</span><strong>Active</strong></div>
+                <div class="stat-item"><i class="fa-solid fa-users"></i><span>Anëtarë</span><strong>+1000</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KONTEJNERI I BOTËVE ================= -->
+    <main class="bots-container" id="bots">
+
+        <!-- NEXUS BOT -->
+        <div class="bot-card" id="nexus-bot">
+            <div class="bot-header">
+                <img src="images/nexus-bot.png" alt="Nexus Bot" class="bot-icon">
+                <div>
+                    <h2>Nexus Bot <span class="badge">APP</span></h2>
+                    <p class="bot-desc">Boti kryesor për menaxhimin dhe moderimin e serverit.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1512437442463011047" class="btn-invite" target="_blank"><i class="fa-brands fa-discord"></i> Shto në Discord</a>
+            </div>
+            <div class="commands-section">
+                <h3><i class="fa-solid fa-slash"></i> Slash Commands (/)</h3>
+                <ul class="command-list">
+                    <li><code>/bot</code> - Basic bot info</li>
+                    <li><code>/botinfo</code> - Detailed bot stats</li>
+                    <li><code>/serverinfo</code> - Server info</li>
+                    <li><code>/userinfo [@user]</code> - User info</li>
+                    <li><code>/clear &lt;amount&gt;</code> - Delete messages (Admin)</li>
+                    <li><code>/say &lt;message&gt;</code> - Bot says something</li>
+                    <li><code>/dm_support &lt;message&gt;</code> - Message support</li>
+                    <li><code>/guide</code> - Full bot guide (Admin)</li>
+                    <li><code>/lock [#channel]</code> - Lock channel (Mod)</li>
+                    <li><code>/unlock [#channel]</code> - Unlock channel (Mod)</li>
+                    <li><code>/warn &lt;user&gt; [reason]</code> - Warn user (Mod)</li>
+                    <li><code>/unwarn &lt;user&gt;</code> - Remove warning (Mod)</li>
+                    <li><code>/seewarns [user]</code> - See warnings</li>
+                    <li><code>/ticket</code> - Create ticket panel (Admin)</li>
+                    <li><code>/createchannels</code> - Create all bot channels (Admin)</li>
+                    <li><code>/activity</code> - Activity log (Owner)</li>
+                    <li><code>/help</code> - Show this list</li>
+                </ul>
+                <h3><i class="fa-solid fa-plus"></i> Prefix Commands (+)</h3>
+                <ul class="command-list">
+                    <li><code>+test</code> - Test bot</li>
+                    <li><code>+ping</code> - Check latency</li>
+                    <li><code>+botrules</code> - Show rules</li>
+                    <li><code>+lock [#channel]</code> - Lock channel</li>
+                    <li><code>+unlock [#channel]</code> - Unlock channel</li>
+                    <li><code>+ban @user [reason]</code> - Ban user</li>
+                    <li><code>+kick @user [reason]</code> - Kick user</li>
+                    <li><code>+timeout @user &lt;min&gt; [reason]</code> - Timeout user</li>
+                    <li><code>+mute @user [min] [reason]</code> - Mute user</li>
+                    <li><code>+unmute @user [reason]</code> - Unmute user</li>
+                    <li><code>+warn @user [reason]</code> - Warn user</li>
+                    <li><code>+unwarn @user</code> - Remove warning</li>
+                    <li><code>+seewarns [@user]</code> - See warnings</li>
+                    <li><code>+staffcount</code> - Count staff</li>
+                    <li><code>+createchannels</code> - Create all bot channels (Admin)</li>
+                    <li><code>+ticket</code> - Create ticket panel (Admin)</li>
+                    <li><code>+support &lt;message&gt;</code> - Support request</li>
+                    <li><code>+setsupportchannel #channel</code> - Set support channel</li>
+                    <li><code>+dm @user &lt;message&gt;</code> - DM user (Admin)</li>
+                    <li><code>+help</code> - Show this list</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NEXUS AI -->
+        <div class="bot-card" id="nexus-ai">
+            <div class="bot-header">
+                <img src="images/nexus-ai.png" alt="Nexus AI" class="bot-icon">
+                <div>
+                    <h2>Nexus AI <span class="badge">APP</span></h2>
+                    <p class="bot-desc">Asistenti juaj inteligjent me fuqi të AI.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1547576998375858257" class="btn-invite" target="_blank"><i class="fa-brands fa-discord"></i> Shto në Discord</a>
+            </div>
+            <div class="commands-section">
+                <h3><i class="fa-solid fa-slash"></i> Slash Commands (/)</h3>
+                <ul class="command-list">
+                    <li><code>/ask</code> - Ask a question about Discord</li>
+                    <li><code>/math</code> - Solve a math problem step by step</li>
+                    <li><code>/search</code> - Search for scientific, social, sports, and other information</li>
+                    <li><code>/model</code> - Change the AI model</li>
+                    <li><code>/rss</code> - Summarize the latest article from an RSS feed</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NEXUS ROBLOX -->
+        <div class="bot-card" id="nexus-roblox">
+            <div class="bot-header">
+                <img src="images/nexus-roblox.png" alt="Nexus Roblox" class="bot-icon" onerror="this.src='images/nexus-bot.png'">
+                <div>
+                    <h2>Nexus Roblox <span class="badge badge-verified">VERIFIED BOT</span></h2>
+                    <p class="bot-desc">Fetch Roblox game stats, group info, and user profiles directly in Discord.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1563241663969755238" class="btn-invite" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> Invite Nexus Roblox</a>
+            </div>
+            <div class="commands-section">
+                <h3><i class="fa-solid fa-slash"></i> Slash Commands (/)</h3>
+                <ul class="command-list">
+                    <li><code>/roblox-group</code> - Fetch Roblox group info</li>
+                    <li><code>/roblox-random</code> - Fetch a random Roblox user profile</li>
+                    <li><code>/roblox-stats</code> - Fetch Roblox game stats</li>
+                    <li><code>/roblox-user</code> - Fetch Roblox user info by username</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NEXUS STAT -->
+        <div class="bot-card" id="nexus-stat">
+            <div class="bot-header">
+                <img src="images/nexus-stat.png" alt="Nexus Stat" class="bot-icon">
+                <div>
+                    <h2>Nexus Stat <span class="badge">APP</span></h2>
+                    <p class="bot-desc">Statistika të detajuara për serverin tuaj.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1554497297763541064" class="btn-invite" target="_blank"><i class="fa-brands fa-discord"></i> Shto në Discord</a>
+            </div>
+            <div class="commands-section">
+                <h3><i class="fa-solid fa-slash"></i> Slash Commands (/)</h3>
+                <ul class="command-list">
+                    <li><code>/stats</code> / <code>/me</code> / <code>/user</code></li>
+                    <li><code>/top</code> / <code>/leaderboard</code> / <code>/rank</code></li>
+                    <li><code>/activity</code></li>
+                    <li><code>/ping</code> / <code>/invite</code> / <code>/help</code></li>
+                </ul>
+                <h3><i class="fa-solid fa-plus"></i> Prefix Commands (n!)</h3>
+                <ul class="command-list">
+                    <li><code>n!stats</code></li>
+                    <li><code>n!top messages</code></li>
+                    <li><code>n!top voice</code></li>
+                    <li><code>n!leaderboard</code></li>
+                    <li><code>n!rank</code></li>
+                    <li><code>n!activity</code></li>
+                    <li><code>n!setprefix</code> / <code>n!reset</code></li>
+                    <li><code>n!ping</code> / <code>n!invite</code> / <code>n!help</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NEXUS VERIFICATION -->
+        <div class="bot-card exclusive-card" id="nexus-verification">
+            <div class="bot-header">
+                <img src="images/nexus-verification.png" alt="Nexus Verification" class="bot-icon">
+                <div>
+                    <h2>NEXUS VERIFICATION <span class="badge badge-exclusive">EXCLUSIVE</span></h2>
+                    <p class="bot-desc">Sistem verifikimi dhe siguri për anëtarët e rinj.</p>
+                </div>
+            </div>
+            <div class="exclusive-notice">
+                <i class="fa-solid fa-lock"></i>
+                <p><strong>Ky bot është ekskluziv vetëm për serverin NEXUS TEAM.</strong></p>
+                <p>Nuk mund të ftohet në servera të tjerë. Për më shumë informacion, bashkohuni me serverin tonë zyrtar.</p>
+            </div>
+              <div class="bot-actions">
+                <a href="https://discord.gg/TUewXwtZRC" class="btn-invite btn-exclusive" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-discord"></i> Futu në Server
+                </a>
+            </div>
+            <div class="commands-section">
+                <h3>⚙️ Setup & Informacion</h3>
+                <ul class="command-list">
+                    <li><code>/createserver</code> - Krijon strukturën e serverit</li>
+                    <li><code>/rules</code> - Shfaq rregullat dhe informacionet</li>
+                    <li><code>/help</code> - Shfaq këtë mesazh</li>
+                </ul>
+                <h3>🛡️ Moderimi</h3>
+                <ul class="command-list">
+                    <li><code>/kick</code> - Përjashton një anëtar</li>
+                    <li><code>/ban</code> - Banon një anëtar</li>
+                    <li><code>/timeout</code> - Vendos timeout</li>
+                    <li><code>/warn</code> - Paralajmëron një anëtar</li>
+                    <li><code>/warnings</code> - Shikon paralajmërimet</li>
+                    <li><code>/clearwarnings</code> - Pastron paralajmërimet</li>
+                </ul>
+                <h3>🔧 Menaxhimi i Kanalit</h3>
+                <ul class="command-list">
+                    <li><code>/purge</code> - Fshin mesazhe</li>
+                    <li><code>/slowmode</code> - Vendos slowmode</li>
+                    <li><code>/lock</code> - Bllokon kanalin</li>
+                    <li><code>/unlock</code> - Zhbllokon kanalin</li>
+                </ul>
+                <h3>⏳ Temporary</h3>
+                <ul class="command-list">
+                    <li><code>/tempban</code> - Banon përkohësisht</li>
+                </ul>
+                <h3>👑 Premium</h3>
+                <ul class="command-list">
+                    <li><code>/givepremium</code> - Jep rolin Premium</li>
+                    <li><code>/removepremium</code> - Heq rolin Premium</li>
+                </ul>
+                <h3>📊 Informacion</h3>
+                <ul class="command-list">
+                    <li><code>/stats</code> - Statistikat e serverit</li>
+                    <li><code>/userinfo</code> - Informacion për anëtarin</li>
+                    <li><code>/logs</code> - Regjistrat e moderimit</li>
+                    <li><code>/nickname</code> - Ndryshon nickname-in tuaj</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NEXUS MUSIC -->
+        <div class="bot-card" id="nexus-music">
+            <div class="bot-header">
+                <img src="images/nexus-music.png" alt="Nexus Music" class="bot-icon">
+                <div>
+                    <h2>Nexus Music <span class="badge">APP</span></h2>
+                    <p class="bot-desc">Spotify + Deezer music bot me mbështetje 24/7.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1552720287051817053" class="btn-invite" target="_blank"><i class="fa-brands fa-discord"></i> Shto në Discord</a>
+            </div>
+            <div class="commands-section">
+                <h3>🎵 Music (nex!)</h3>
+                <ul class="command-list">
+                    <li><code>nex!play &lt;song or URL&gt;</code> - Play</li>
+                    <li><code>nex!skip</code> - Skip</li>
+                    <li><code>nex!stop</code> - Stop</li>
+                    <li><code>nex!pause</code> - Pause</li>
+                    <li><code>nex!resume</code> - Resume</li>
+                    <li><code>nex!volume &lt;1-100&gt;</code> - Volume</li>
+                    <li><code>nex!quit</code> - Disconnect the bot from voice</li>
+                    <li><code>nex!queue</code> - View queue</li>
+                </ul>
+                <h3>24/7 & Loop</h3>
+                <ul class="command-list">
+                    <li><code>nex!247</code> - Toggle 24/7 mode</li>
+                    <li><code>nex!loop &lt;track/queue/off&gt;</code> - Loop mode</li>
+                </ul>
+                <h3>DJ & History</h3>
+                <ul class="command-list">
+                    <li><code>nex!setdj @role</code> - Set DJ role</li>
+                    <li><code>nex!history</code> - Recent plays</li>
+                </ul>
+                <h3>Other</h3>
+                <ul class="command-list">
+                    <li><code>nex!ping</code> - Bot status</li>
+                    <li><code>nex!help</code> - This menu</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NEXUS FUNPLAY -->
+        <div class="bot-card" id="nexus-funplay">
+            <div class="bot-header">
+                <img src="images/nexus-funplay.png" alt="Nexus FunPlay" class="bot-icon">
+                <div>
+                    <h2>Nexus FunPlay <span class="badge">APP</span></h2>
+                    <p class="bot-desc">Bot argëtues me lojëra, sfida dhe shaka për serverin tënd.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1550905791093936248" class="btn-invite" target="_blank"><i class="fa-brands fa-discord"></i> Shto në Discord</a>
+            </div>
+            <div class="commands-section">
+                <h3>🎲 Lojëra (nfp!)</h3>
+                <ul class="command-list">
+                    <li><code>nfp!trivia</code> - Lojë trivia me pyetje</li>
+                    <li><code>nfp!duel @user</code> - Sfido në duel</li>
+                    <li><code>nfp!slots</code> - Provo fatin në slots</li>
+                    <li><code>nfp!roll [max]</code> - Hedh zarin</li>
+                    <li><code>nfp!coinflip</code> - Hedh monedhën</li>
+                </ul>
+                <h3>😂 Argëtim</h3>
+                <ul class="command-list">
+                    <li><code>nfp!8ball &lt;pyetja&gt;</code> - Përgjigje magjike</li>
+                    <li><code>nfp!wyr</code> - Would You Rather</li>
+                    <li><code>nfp!truth @user</code> - Pyetje e vërtetë</li>
+                    <li><code>nfp!dare @user</code> - Sfidë argëtuese</li>
+                    <li><code>nfp!roast @user</code> - Shaka miqësore</li>
+                </ul>
+                <h3>🏆 Renditja</h3>
+                <ul class="command-list">
+                    <li><code>nfp!rank [@user]</code> - Pikët e tua ose të dikujt tjetër</li>
+                    <li><code>nfp!leaderboard</code> - Top 10 lojtarët e serverit</li>
+                </ul>
+                <h3>ℹ️ Të tjera</h3>
+                <ul class="command-list">
+                    <li><code>nfp!help</code> - Kjo menu</li>
+                    <li><code>nfp!ping</code> - Statusi i botit</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NEXUS RULES GEN -->
+        <div class="bot-card" id="nexus-rules">
+            <div class="bot-header">
+                <img src="images/nexus-rules.png" alt="Nexus Rules Gen" class="bot-icon">
+                <div>
+                    <h2>Nexus Rules Gen <span class="badge">APP</span></h2>
+                    <p class="bot-desc">Gjenerues automatik i rregullave për serverin.</p>
+                </div>
+            </div>
+            <div class="bot-actions">
+                <a href="https://discord.com/oauth2/authorize?client_id=1549363249756119082" class="btn-invite" target="_blank"><i class="fa-brands fa-discord"></i> Shto në Discord</a>
+            </div>
+            <div class="commands-section">
+                <h3><i class="fa-solid fa-slash"></i> Slash Commands (/)</h3>
+                <ul class="command-list">
+                    <li><code>/rules generate</code> - Gjeneron rregulla të reja</li>
+                    <li><code>/rules history</code> - Historiku i versioneve</li>
+                    <li><code>/rules pdf</code> - Shkarko PDF te rregullave aktive</li>
+                    <li><code>/rules post</code> - Gjeneron dhe poston direkt</li>
+                    <li><code>/rules show</code> - Shfaq një version</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2026 NEXUS TEAM. Të gjitha të drejtat e rezervuara.</p>
+        <p class="footer-leader"><i class="fa-solid fa-crown"></i> Lider: Nexus Bot</p>
+        <div class="footer-links">
+            <a href="verify-user.html">Verification</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="https://discord.gg/TUewXwtZRC" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        </div>
+    </footer>
+
+    <div class="chat-widget" id="nexus-chat">
+        <section class="chat-panel" id="chat-panel" aria-label="Nexus AI chat" aria-hidden="true">
+            <div class="chat-header">
+                <div class="chat-avatar"><i class="fa-solid fa-sparkles"></i></div>
+                <div class="chat-heading">
+                    <h2>Nexus AI</h2>
+                    <span><span class="chat-status-dot"></span> Gemini-powered assistant</span>
+                </div>
+                <button class="chat-close" id="chat-close" type="button" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages" aria-live="polite" aria-relevant="additions">
+                <div class="chat-message assistant-message">Hi! Ask me about any NEXUS TEAM bot, its commands, or our Discord server.</div>
+            </div>
+            <form class="chat-form" id="chat-form">
+                <label class="visually-hidden" for="chat-input">Message Nexus Assistant</label>
+                <input id="chat-input" name="message" type="text" placeholder="Ask about a bot..." autocomplete="off" required>
+                <button type="submit" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </section>
+        <button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open Nexus Assistant" aria-expanded="false" aria-controls="chat-panel">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'sq' }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

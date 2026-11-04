@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS TEAM - User Verification</title>
+    <link rel="stylesheet" href="legal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</div>
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kthehu në Faqen Kryesore</a>
+    </header>
+
+    <section class="page-header">
+        <div class="icon-big"><i class="fa-solid fa-shield-halved"></i></div>
+        <h1>User Verification</h1>
+        <p>Verifikimi zyrtar i përdoruesve për NEXUS TEAM</p>
+        <span class="last-updated"><i class="fa-solid fa-clock"></i> Last updated: 8 Tetor 2026</span>
+    </section>
+
+    <div class="container">
+        
+        <div class="verify-display">
+            <div class="status-badge">
+                <i class="fa-solid fa-circle-check"></i> Verification System: Active
+            </div>
+            <h2 style="color:#fff; margin-bottom: 10px;">Linked Roles Verification</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+                Ky është endpoint-i i verifikimit për NEXUS TEAM. Discord përdor këtë URL për të verifikuar përdoruesit dhe për t'u mundësuar atyre të lidhin rolet me llogarinë e tyre.
+            </p>
+
+            <div class="verify-input-group">
+                <input type="text" readonly value="https://nexus-team.netlify.app/verify-user" id="verifyEndpoint">
+                <button onclick="copyEndpoint(event)"><i class="fa-solid fa-copy"></i> Kopjo URL</button>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2><i class="fa-solid fa-circle-info"></i> Si Funksionon Verifikimi?</h2>
+            <p>Verifikimi i përdoruesve në NEXUS TEAM bëhet përmes sistemit të avancuar të Discord Linked Roles. Ky sistem lejon që përdoruesit të lidhin rolet e tyre me llogarinë e Discord dhe të verifikohen automatikisht.</p>
+            
+            <h3>Procesi i Verifikimit:</h3>
+            <ul>
+                <li>Përdoruesi klikon butonin "Verify" në serverin tonë të Discord</li>
+                <li>Discord dërgon një kërkesë HTTP në këtë endpoint</li>
+                <li>Serveri kontrollon nëse përdoruesi plotëson kushtet e verifikimit</li>
+                <li>Nëse plotëson kushtet, roli i verifikimit jepet automatikisht</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <h2><i class="fa-solid fa-code"></i> Përgjigja JSON e Endpoint-it</h2>
+            <p>Kur Discord dërgon një kërkesë në këtë endpoint, serveri i NEXUS TEAM kthen një përgjigje në formatin e mëposhtëm JSON:</p>
+            
+            <div class="highlight-box">
+                <p style="font-family: 'Consolas', monospace; font-size: 13px; line-height: 1.8;">
+{<br>
+&nbsp;&nbsp;"verified": true,<br>
+&nbsp;&nbsp;"userId": "123456789012345678",<br>
+&nbsp;&nbsp;"roleId": "987654321098765432",<br>
+&nbsp;&nbsp;"timestamp": "2026-10-08T12:00:00Z",<br>
+&nbsp;&nbsp;"team": "NEXUS TEAM"<br>
+}
+                </p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2><i class="fa-solid fa-lock"></i> Siguria dhe Privatësia</h2>
+            <p>NEXUS TEAM merr seriozisht sigurinë dhe privatësinë e të dhënave tuaja. Gjatë procesit të verifikimit:</p>
+            <ul>
+                <li>Mblidhen vetëm të dhënat e nevojshme për verifikim</li>
+                <li>Të dhënat nuk ndahen me palë të treta</li>
+                <li>Përdoruesi ka të drejtë të kërkojë fshirjen e të dhënave në çdo kohë</li>
+                <li>Komunikimi bëhet përmes lidhjeve të sigurta HTTPS</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <h2><i class="fa-solid fa-question-circle"></i> Pyetje të Shpeshta</h2>
+            
+            <h3>Çfarë ndodh nëse verifikimi dështon?</h3>
+            <p>Nëse verifikimi dështon, përdoruesi njoftohet automatikisht dhe mund të provojë përsëri. Nëse problemi vazhdon, mund të kontaktojë ekipin e NEXUS TEAM në Discord.</p>
+            
+            <h3>A mund të hiqet verifikimi pasi është dhënë?</h3>
+            <p>Po, administratorët e NEXUS TEAM mund të heqin verifikimin në çdo kohë nëse përdoruesi shkel rregullat e serverit.</p>
+
+            <!-- BUTONI FUTU NË SERVER -->
+            <div class="join-server-box">
+                <p><i class="fa-solid fa-circle-question"></i> Keni nevojë për ndihmë shtesë me verifikimin?</p>
+                <a href="https://discord.gg/TUewXwtZRC" class="btn-join-server" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-discord"></i> Futu në Server
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NEXUS TEAM. Të gjitha të drejtat e rezervuara. | <a href="terms-of-service.html">Terms of Service</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        function copyEndpoint(e) {
+            const input = document.getElementById('verifyEndpoint');
+            input.select();
+            input.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(input.value).then(() => {
+                const btn = e.target.closest('button');
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> U kopjua!';
+                btn.style.backgroundColor = '#23a55a';
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.style.backgroundColor = '';
+                }, 1500);
+            });
+        }
+    </script>
+</body>
+</html>
