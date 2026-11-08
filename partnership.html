@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +7,56 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="legal.css">
     <link rel="stylesheet" href="apply.css">
-    <link rel="icon" type="image/png" href="images/nexus-bot.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</div>
-        <nav>
-            <a href="index.html#nexus-bot">Nexus Bot</a>
-            <a href="index.html#nexus-ai">Nexus AI</a>
-            <a href="index.html#nexus-roblox">Nexus Roblox</a>
-            <a href="index.html#nexus-stat">Nexus Stat</a>
-            <a href="index.html#nexus-verification">Verification</a>
-            <a href="index.html#nexus-music">Music</a>
-            <a href="index.html#nexus-funplay">FunPlay</a>
-            <a href="index.html#nexus-rules">Rules Gen</a>
-            <a href="apply-staff.html">Apply Staff</a>
-            <a href="partnership.html">Partnership</a>
-        </nav>
-        <div id="google_translate_element" aria-label="Choose page language"></div>
-        <a href="https://discord.com/oauth2/authorize?client_id=1512437442463011047" class="btn-join" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-crown"></i> Shto Nexus Bot
-        </a>
+        <a href="index.html" class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+            <nav aria-label="Main navigation">
+                <a href="index.html#bots">Bots</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="verify-user.html">Verify User</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="apply-staff.html">Apply Staff</a>
+                <a href="partnership.html">Partnership</a>
+            </nav>
+            <a href="https://discord.gg/TUewXwtZRC" class="btn-server" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> Join Server</a>
+        </div>
     </header>
 
     <section class="page-header">
         <div class="icon-big"><i class="fa-solid fa-handshake"></i></div>
         <h1>Partnership Application</h1>
-        <p>Bashkëpunoni me NEXUS TEAM</p>
-        <span class="last-updated"><i class="fa-solid fa-clock"></i> Last updated: 10 Tetor 2026</span>
+        <p>Partner with NEXUS TEAM.</p>
+        <span class="last-updated"><i class="fa-solid fa-clock"></i> Last updated: October 10, 2026</span>
     </section>
 
     <div class="container">
 
         <div class="intro-box">
-            <p>Ky është formulari zyrtar i aplikimit për partneritet me NEXUS TEAM. Plotësoni të gjitha fushat me kujdes. Aplikimet me ID të pavlefshme Discord do të refuzohen automatikisht.</p>
+            <p>This is the official NEXUS TEAM partnership application. Please complete every field carefully. Applications with an invalid Discord ID will be rejected automatically.</p>
         </div>
 
         <div class="helper-box">
             <button class="helper-toggle" type="button" aria-expanded="false">
-                <span><i class="fa-solid fa-circle-question" style="color: var(--accent-color); margin-right: 8px;"></i> Si ta gjeni Discord User ID tuaj?</span>
+                <span><i class="fa-solid fa-circle-question" style="color: var(--accent-color); margin-right: 8px;"></i> How do I find my Discord User ID?</span>
                 <i class="fa-solid fa-chevron-down toggle-icon"></i>
             </button>
             <div class="helper-content">
                 <ol class="helper-steps">
-                    <li>Hapni Discord dhe shkoni në Settings (ikona e ingranazhit)</li>
-                    <li>Shkoni në Advanced settings</li>
-                    <li>Aktivizoni "Developer Mode"</li>
-                    <li>Kthehuni në profilin tuaj, klikoni me të djathtën mbi emrin tuaj</li>
-                    <li>Klikoni "Copy User ID"</li>
-                    <li>Ngjitni numrin këtu (duhet të jetë 17-19 shifra, vetëm numra)</li>
+                    <li>Open Discord and go to User Settings (the gear icon).</li>
+                    <li>Open the Advanced settings section.</li>
+                    <li>Turn on Developer Mode.</li>
+                    <li>Open your profile and right-click your username.</li>
+                    <li>Select Copy User ID.</li>
+                    <li>Paste the number here. It must contain 17-19 digits only.</li>
                 </ol>
             </div>
         </div>
@@ -65,21 +64,21 @@
         <form class="application-form" data-form-type="partnership" data-success-box="successBox" novalidate>
             <div class="form-error-banner">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                <span>Ju lutemi rishikoni fushat e shënuara me të kuqe dhe provoni përsëri.</span>
+                <span>Please review the fields marked in red and try again.</span>
             </div>
 
-            <h2 class="form-section-title"><i class="fa-solid fa-user"></i> Informacioni juaj</h2>
+            <h2 class="form-section-title"><i class="fa-solid fa-user"></i> Your Information</h2>
 
             <div class="form-group row">
                 <div class="form-group">
                     <label for="serverName">Your Name / Server Name <span class="required">*</span></label>
-                    <input type="text" id="serverName" name="serverName" placeholder="Emri juaj ose emri i serverit" required>
-                    <div class="error-message" id="serverName-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                    <input type="text" id="serverName" name="serverName" placeholder="Your name or server name" required>
+                    <div class="error-message" id="serverName-error"><i class="fa-solid fa-circle-exclamation"></i> This field is required.</div>
                 </div>
                 <div class="form-group">
                     <label for="discordUsername">Discord Username <span class="required">*</span></label>
-                    <input type="text" id="discordUsername" name="discordUsername" placeholder="username#0000 ose @username" required>
-                    <div class="error-message" id="discordUsername-error"><i class="fa-solid fa-circle-exclamation"></i> Kjo fushë është e detyrueshme.</div>
+                    <input type="text" id="discordUsername" name="discordUsername" placeholder="username#0000 or @username" required>
+                    <div class="error-message" id="discordUsername-error"><i class="fa-solid fa-circle-exclamation"></i> This field is required.</div>
                 </div>
             </div>
 
@@ -92,22 +91,22 @@
                                placeholder="123456789012345678" required>
                         <i class="fa-solid fa-circle-check validation-icon"></i>
                     </div>
-                    <div class="field-hint">Vetëm numra, 17-19 shifra</div>
+                    <div class="field-hint">Numbers only, 17-19 digits</div>
                     <div class="error-message" id="discordUserId-error"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid Discord ID (17-19 digits, numbers only)</div>
                 </div>
                 <div class="form-group">
-                    <label for="serverId">Your Server ID <span style="color: var(--text-muted); font-weight: 400;">(opsionale)</span></label>
+                    <label for="serverId">Your Server ID <span style="color: var(--text-muted); font-weight: 400;">(optional)</span></label>
                     <div class="discord-id-wrapper">
                         <input type="text" id="serverId" name="serverId" class="discord-id-input"
                                inputmode="numeric" pattern="[0-9]{17,19}" maxlength="19"
                                placeholder="123456789012345678">
                         <i class="fa-solid fa-circle-check validation-icon"></i>
                     </div>
-                    <div class="field-hint">Vetëm numra, 17-19 shifra</div>
+                    <div class="field-hint">Numbers only, 17-19 digits</div>
                 </div>
             </div>
 
-            <h2 class="form-section-title"><i class="fa-solid fa-briefcase"></i> Detajet e Partneritetit</h2>
+            <h2 class="form-section-title"><i class="fa-solid fa-briefcase"></i> Partnership Details</h2>
 
             <div class="form-group">
                 <label>Type of partnership <span class="required">*</span></label>
@@ -129,25 +128,25 @@
                         <label for="ptype-botdev" class="radio-label">Bot Developer</label>
                     </div>
                 </div>
-                <div class="error-message" id="partnershipType-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi zgjidhni një lloj partneriteti.</div>
+                <div class="error-message" id="partnershipType-error"><i class="fa-solid fa-circle-exclamation"></i> Please select a partnership type.</div>
             </div>
 
             <div class="form-group">
                 <label for="aboutProject">Tell us about your server/project <span class="required">*</span></label>
-                <textarea id="aboutProject" name="aboutProject" data-min-length="100" placeholder="Përshkruani serverin ose projektin tuaj (minimumi 100 karaktere)..." required></textarea>
+                <textarea id="aboutProject" name="aboutProject" data-min-length="100" placeholder="Describe your server or project (minimum 100 characters)..." required></textarea>
                 <div class="char-counter insufficient" data-counter-for="aboutProject">0 / 100 min</div>
-                <div class="error-message" id="aboutProject-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi shkruani të paktën 100 karaktere.</div>
+                <div class="error-message" id="aboutProject-error"><i class="fa-solid fa-circle-exclamation"></i> Please write at least 100 characters.</div>
             </div>
 
             <div class="form-group">
                 <label for="whyPartner">Why do you want to partner with NEXUS TEAM? <span class="required">*</span></label>
-                <textarea id="whyPartner" name="whyPartner" data-min-length="50" placeholder="Shpjegoni pse dëironi partneritet me ne (minimumi 50 karaktere)..." required></textarea>
+                <textarea id="whyPartner" name="whyPartner" data-min-length="50" placeholder="Explain why you want to partner with us (minimum 50 characters)..." required></textarea>
                 <div class="char-counter insufficient" data-counter-for="whyPartner">0 / 50 min</div>
-                <div class="error-message" id="whyPartner-error"><i class="fa-solid fa-circle-exclamation"></i> Ju lutemi shkruani të paktën 50 karaktere.</div>
+                <div class="error-message" id="whyPartner-error"><i class="fa-solid fa-circle-exclamation"></i> Please write at least 50 characters.</div>
             </div>
 
             <button type="submit" class="btn-submit">
-                <i class="fa-solid fa-paper-plane"></i> Dërgo Aplikimin
+                <i class="fa-solid fa-paper-plane"></i> Submit Application
             </button>
         </form>
 
@@ -155,25 +154,27 @@
             <div class="success-icon">
                 <i class="fa-solid fa-check-circle"></i>
             </div>
-            <h2>Sukses!</h2>
-            <p>Aplikimi për partneritet u dërgua me sukses! Futu në Server dhe kontakto liderinë NEXUS TEAM.</p>
+            <h2>Success!</h2>
+            <p>Your partnership application was submitted successfully! Join the server and contact the NEXUS TEAM leadership.</p>
             <a href="https://discord.gg/TUewXwtZRC" class="btn-join-server" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-discord"></i> Futu në Server
+                <i class="fa-brands fa-discord"></i> Join Server
             </a>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 NEXUS TEAM. Të gjitha të drejtat e rezervuara.</p>
-        <p class="footer-leader"><i class="fa-solid fa-crown"></i> Lider: Nexus Bot</p>
+        <p>&copy; 2026 NEXUS TEAM. All rights reserved.</p>
+        <p class="footer-leader"><i class="fa-solid fa-crown"></i> Leader: Nexus Bot</p>
         <div class="footer-links">
-            <a href="verify-user.html">Verification</a>
+            <a href="index.html#bots">Bots</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="verify-user.html">Verify User</a>
             <a href="apply-staff.html">Apply Staff</a>
             <a href="partnership.html">Partnership</a>
             <a href="terms-of-service.html">Terms of Service</a>
             <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="https://discord.gg/TUewXwtZRC" target="_blank" rel="noopener noreferrer">Join Discord</a>
+            <a href="https://discord.gg/TUewXwtZRC" target="_blank" rel="noopener noreferrer">Join Server</a>
         </div>
     </footer>
 
@@ -181,7 +182,7 @@
     <script src="apply.js"></script>
     <script>
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'sq' }, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
         }
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

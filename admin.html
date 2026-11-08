@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Announcements | NEXUS TEAM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><i class="fa-solid fa-robot"></i> NEXUS TEAM</a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+            <nav aria-label="Main navigation">
+                <a href="index.html#bots">Bots</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="verify-user.html">Verify User</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="apply-staff.html">Apply Staff</a>
+                <a href="partnership.html">Partnership</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="announcement-page">
+        <section class="page-header">
+            <div class="icon-big"><i class="fa-solid fa-bullhorn"></i></div>
+            <h1>Announcement Admin</h1>
+            <p>Publish updates for the NEXUS TEAM community.</p>
+        </section>
+
+        <div class="announcement-layout">
+            <form class="announcement-form" id="announcement-form">
+                <h2><i class="fa-solid fa-pen-to-square"></i> New Announcement</h2>
+                <div class="announcement-field">
+                    <label for="announcement-title">Title</label>
+                    <input id="announcement-title" name="title" type="text" maxlength="120" required>
+                </div>
+                <div class="announcement-field">
+                    <label for="announcement-message">Message</label>
+                    <textarea id="announcement-message" name="message" rows="7" maxlength="5000" required></textarea>
+                </div>
+                <button class="btn-invite" type="submit"><i class="fa-solid fa-paper-plane"></i> Publish Announcement</button>
+                <p class="announcement-status" id="announcement-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <section class="announcement-history" aria-labelledby="announcement-history-title">
+                <h2 id="announcement-history-title">Previous Announcements</h2>
+                <div class="announcement-list" id="announcement-list" data-admin="true"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NEXUS TEAM. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html#bots">Bots</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="verify-user.html">Verify User</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="apply-staff.html">Apply Staff</a>
+            <a href="partnership.html">Partnership</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="announcements.js"></script>
+</body>
+</html>
